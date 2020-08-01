@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,14 +14,37 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function App() {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {const handleWindowResize = () => setScreenWidth(window.innerWidth)
+    window.addEventListener("resize", handleWindowResize);
+
+    // Return a function from the effect that removes the event listener
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
+  const breakpoint = 620;
+
+  const Navbar = () => {
+    // The current width of the viewport
+    const width = window.innerWidth;
+    // The width below which the mobile view should be rendered
+    const breakpoint = 620;
+    
+    /* If the viewport is more narrow than the breakpoint render the
+       mobile component, else render the desktop component */
+    return width < breakpoint ? <Topbar /> : <Sidebar />;
+  }
 
 
   return (
     <Router>
+      {screenWidth>breakpoint ? null: <Topbar />}
       <Container fluid>
+          
           <Row>
           
-            <Sidebar />
+            {screenWidth>breakpoint ? <Sidebar /> : null}
             <Col className="main-container">
               <div className="sidebar-spacer"></div>
               <Switch>
