@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: grey;
+}
+
+a:active {
+  color: grey;
+}
+
+
+.txt-800{
+  font-weight: 800;
+  font-size: x-large;
+}
+
+.txt-400{
+  font-weight: 400;
+  font-size: x-large;
+}
+
+.name-logo {
+  font-weight: 900;
+}
+
+.main-container {
+  height:100vh;
+  overflow: auto;
+  padding-right: 4%;
+}
+
+.topbar-container {
+  display:flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 88%;
+  padding: 50px 6% 20px 6%;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+}
+
+.topbar-spacer {
+  height: 90px;
+}
+
+.sidebar-container {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:100vh;
+  padding: 30px 10px 30px 4%;
+
+}
+
+.sidebar-logo {
+  padding-top:80px;
+}
+
+.sidebar-spacer {
+  height:110px;
+}
