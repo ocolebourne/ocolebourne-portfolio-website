@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
 }
 
 
@@ -24,6 +25,9 @@ a:visited {
 }
 
 a:hover {
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transform: scaleY(1.5);
   color: grey;
 }
 
@@ -42,9 +46,16 @@ a:active {
   font-size: x-large;
 }
 
+h1 {
+ font-size: 1.2rem;
+ font-weight: 500;
+ padding-bottom: 30px;
+}
+
 
 .name-logo {
   font-weight: 900;
+  text-transform: uppercase;
 }
 
 .main-container {
@@ -57,8 +68,9 @@ a:active {
   display:flex;
   justify-content: space-between;
   position: fixed;
-  width: 97%;
-  padding: 50px 6% 20px 6%;
+  width: calc(100vw - 15px);
+  padding: 0px 4% 0px 4%;
+  height: 75px;
   flex-direction: row;
   align-items: center;
   background-color: white;
@@ -67,7 +79,7 @@ a:active {
 }
 
 .topbar-spacer {
-  height: 90px;
+  height: 80px;
 }
 
 .sidebar-container {
@@ -80,9 +92,86 @@ a:active {
 }
 
 .sidebar-logo {
-  padding-top:80px;
+  padding-top:130px;
 }
 
 .sidebar-spacer {
   height:110px;
+}
+
+.home-image{
+  padding-top:20px;
+}
+
+.home-header{
+  padding: 50px 0px 80px 0px;
+}
+
+.home-project-body {
+  padding: 10px 0px 30px 0px;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+}
+
+.text-inline{
+  display: inline;
+  animation: fadeIn ease 10s;
+-webkit-animation: fadeIn ease 10s;
+}
+
+.no-gutter{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.home-project-button {
+  height:20px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.home-project-button:hover {
+  transform: translate(1em,0);
+  -webkit-transform: translate(1em,0);
+  -moz-transform: translate(1em,0);
+  -o-transform: translate(1em,0);
+  -ms-transform: translate(1em,0);
+}
+
+
+.home-project-button-cont{
+  text-align: right;
+  padding-left: 0px;
+  padding-right: 15px;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
 }

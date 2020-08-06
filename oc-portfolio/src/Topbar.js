@@ -11,10 +11,12 @@ function Topbar() {
 
 
     return (
+        <div>
             <div className="topbar-container">
                 <div className="name-logo"><a href="/">Oliver Colebourne</a></div>
                 <div><a href="/about">About me</a></div>
             </div>
+        </div>
     );
 
 }

@@ -14,41 +14,32 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function App() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const breakpoint = 575;
+  const [screenLarge, setScreenLarge] = useState(window.innerWidth>breakpoint);
 
-  useEffect(() => {const handleWindowResize = () => setScreenWidth(window.innerWidth)
+  useEffect(() => {const handleWindowResize = () => setScreenLarge(window.innerWidth>breakpoint)
     window.addEventListener("resize", handleWindowResize);
 
     // Return a function from the effect that removes the event listener
     return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
 
-  const breakpoint = 620;
+  
 
-  const Navbar = () => {
-    // The current width of the viewport
-    const width = window.innerWidth;
-    // The width below which the mobile view should be rendered
-    const breakpoint = 620;
-    
-    /* If the viewport is more narrow than the breakpoint render the
-       mobile component, else render the desktop component */
-    return width < breakpoint ? <Topbar /> : <Sidebar />;
-  }
 
 
   return (
     <Router>
-      {screenWidth>breakpoint ? null: <Topbar />}
+      {screenLarge ? null: <Topbar />}
       <Container fluid>
           
           <Row>
           
-            {screenWidth>breakpoint ? <Sidebar /> : null}
+            {screenLarge ? <Sidebar /> : null}
             <Col className="main-container">
-              <div className="sidebar-spacer"></div>
+            {screenLarge ? <div className="sidebar-spacer"></div> : null}
               <Switch>
-                <Route path="/" exact component={Home} />
+                <Route path="/" exact component={() =><Home topbar={!screenLarge}/>} />
                 <Route path="/" component={()=><h1>404 not found</h1>} />
                 <Route path="/about" component={()=><p>About</p>} />
               </Switch>
