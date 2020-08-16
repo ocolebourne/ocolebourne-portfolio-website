@@ -103,6 +103,12 @@ h1 {
   padding-top:20px;
 }
 
+.home-video{
+  padding-top:20px;
+  width: 100%;
+  height:auto;
+}
+
 .home-header{
   padding: 50px 0px 80px 0px;
 }
@@ -117,8 +123,10 @@ h1 {
 
 .text-inline{
   display: inline;
-  animation: fadeIn ease 10s;
--webkit-animation: fadeIn ease 10s;
+  /*
+  animation: fadeIn ease 2s;
+-webkit-animation: fadeIn ease 2s;
+*/
 }
 
 .no-gutter{
@@ -151,6 +159,7 @@ h1 {
   padding-right: 15px;
 }
 
+/*
 @keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
@@ -175,3 +184,4 @@ h1 {
 0% {opacity:0;}
 100% {opacity:1;}
 }
+*/
