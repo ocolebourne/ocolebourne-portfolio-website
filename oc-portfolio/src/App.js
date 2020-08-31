@@ -12,6 +12,7 @@ import Sidebar from "./Sidebar";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Nova from './pages/Nova';
 
 function App() {
   const breakpoint = 575;
@@ -37,11 +38,11 @@ function App() {
           
             {screenLarge ? <Sidebar /> : null}
             <Col className="main-container">
-            {screenLarge ? <div className="sidebar-spacer"></div> : null}
               <Switch>
                 <Route path="/" exact component={() =><Home topbar={!screenLarge}/>} />
-                <Route path="/" component={()=><h1>404 not found</h1>} />
                 <Route path="/about" component={()=><p>About</p>} />
+                <Route path="/nova" component={() =><Nova topbar={!screenLarge}/>} />
+                <Route path="/" component={()=><h1>404 not found</h1>} />
               </Switch>
             </Col>
           </Row>

@@ -13,11 +13,12 @@ function Home(props) {
 
     return (
       <div>
-        {props.topbar ? <div className="topbar-spacer"></div> : null }
+        {props.topbar ? <div className="topbar-spacer"></div> : <div className="sidebar-spacer"></div> }
         <div className="home-header">A design engineer skilled at complete development of technical products from problem to fruition. Currently based in London studying at Imperial College.</div>
         <h1>PROJECTS</h1>
         <HomeProject slug="nova" name="Nova" desc=" is a bot, coded through a web-app that makes Python programming engaging for 10-14 year olds through physical input and output." url="/nova" topbar={props.topbar} />
         <HomeProject slug="nova" name="LEON Flow" desc=" is an iot system giving managers insights from around their store - developed for LEON resturants as DEANA Consultants" url="/nova" topbar={props.topbar} />
+        <HomeProject slug="artops" name="Artops" desc=" is a bot, coded through a web-app that makes Python programming engaging for 10-14 year olds through physical input and output." url="/nova" topbar={props.topbar} video2/>
         <HomeProject slug="artops" name="Artops" desc=" is a bot, coded through a web-app that makes Python programming engaging for 10-14 year olds through physical input and output." url="/nova" topbar={props.topbar} video2/>
         <div>
 
