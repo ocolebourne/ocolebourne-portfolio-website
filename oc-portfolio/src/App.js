@@ -13,6 +13,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Nova from './pages/Nova';
+import Artops from './pages/Artops';
 
 function App() {
   const breakpoint = 575;
@@ -42,6 +43,7 @@ function App() {
                 <Route path="/" exact component={() =><Home topbar={!screenLarge}/>} />
                 <Route path="/about" component={()=><p>About</p>} />
                 <Route path="/nova" component={() =><Nova topbar={!screenLarge}/>} />
+                <Route path="/artops" component={() =><Artops topbar={!screenLarge}/>} />
                 <Route path="/" component={()=><h1>404 not found</h1>} />
               </Switch>
             </Col>

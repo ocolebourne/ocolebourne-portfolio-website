@@ -31,23 +31,27 @@ code {
 }
 
 a:link {
-  color: black;
   text-decoration: none;
+  color: var(--project-grey3);
 
 }
 
+strong {
+  font-weight: 600;
+}
+
 a:visited {
-  color: black;
+  color: var(--project-grey3);
 }
 
 a:hover {
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
-  color: var(--project-grey5);
+  color: var(--project-grey2);
 }
 
 a:active {
-  color: var(--project-grey5);
+  color: var(--project-grey2);
 }
 
 
@@ -64,24 +68,42 @@ a:active {
 h1 {
   font-size: 1.2rem;
   font-weight: 500;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 h2 {
-  margin-bottom: 9px;
+  margin-bottom: 10px;
+  font-weight: 500;
   font-size: 14px;
+}
+
+.mb50 {
+  margin-bottom:50px;
 }
 
 .mb30 {
   margin-bottom:30px;
 }
 
+
 .mb20 {
   margin-bottom:20px;
 }
 
 .mb10 {
-  margin-bottom:0px;
+  margin-bottom:10px;
+}
+
+.mt30 {
+  margin-top:30px;
+}
+
+.mt20 {
+  margin-top:20px !important;
+}
+
+.mt10 {
+  margin-top:0px;
 }
 
 .mta {
@@ -226,6 +248,20 @@ h2 {
 }
 */
 
+.youtube-video-container {
+  padding-top: 56.25%;
+  height: 0px;
+  position: relative;
+}
+
+.youtube-video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .project-header {
 
 }
@@ -265,6 +301,7 @@ h2 {
 
 .project-header-image {
   margin: 0px -6% 20px -6%;
+
 }
 /* 
 .project-header-block{
@@ -290,10 +327,11 @@ h2 {
 }
 
 .project-row{
+  padding-bottom:50px;
 }
 
 .project-col {
-  padding-bottom:30px;
+  padding-bottom:20px;
   overflow-x: visible;  
   display: flex;
   flex-direction: column;
@@ -301,13 +339,70 @@ h2 {
 
 }
 
-.nova-image1 {
+.project-image1 {
   margin-top: auto;
   margin-bottom: auto;
   object-fit: scale-down;
-  min-height:400px;
-  max-height:600px;
+
+  overflow-x:hidden;
+
+}
+.project-image3 {
+  margin-top: auto;
+  margin-bottom: auto;
+  object-fit: cover;
+
   overflow-x:hidden;
 
 }
 
+.project-image4 {
+  margin-top: auto;
+  margin-bottom: auto;
+  object-fit: contain;
+
+  overflow-x:hidden;
+
+}
+
+
+.project-image2 {
+  max-width: 1000px;
+  margin:auto;
+
+}
+
+.nova-image-sidescroll{
+  display: flex;
+  overflow-x: auto;
+  
+}
+
+.project-video1-cont {
+  /* width is set as 100% here. any width can be specified as per requirement */
+  width: 100%;
+  padding-top: 100%;
+  height: 0px;
+  position: relative;
+}
+
+.project-video1 {
+  width: 100%;
+  height: 100%;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+}
+
+
+.project-video2 {
+  width: 100%;
+  height:auto;
+}
+
+.jt {
+  text-align: justify;
+  text-justify: inter-word;
+}

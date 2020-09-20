@@ -14,17 +14,30 @@ function HomeProject(props) {
     const video_string2=`./media/home/${props.slug+"2"}.mp4`
 
 
+    const iOS = () => {
+        return [
+          'iPad Simulator',
+          'iPhone Simulator',
+          'iPod Simulator',
+          'iPad',
+          'iPhone',
+          'iPod'
+        ].includes(navigator.platform)
+        // iPad on iOS 13 detection
+        || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+      }
+
     return (
         <div>
             <Row>
                 <Col xs={12} sm={6}>
-                    { props.video1 ? 
+                    { props.video1 && !(iOS()) ? 
                         <video className="home-video" autoPlay loop muted playsInline src={video_string1} type="video/mp4" ></video> : 
                         <Image className="home-image" fluid src={image_string1} alt=" " />
                     }
                 </Col>
                 <Col xs={12} sm={6}>
-                    { props.video2 ? 
+                    { props.video2  && !(iOS()) ? 
                         <video className="home-video"autoPlay loop muted playsInline src={video_string2} type="video/mp4" ></video> : 
                         <Image className="home-image" fluid src={image_string2} alt=" " />
                     }

@@ -20,7 +20,7 @@ function ProjectHeader(props) {
                 <Image fluid src={header_image} alt=" " />
             </div>
             
-            <h1>Nova</h1>
+            <h1>{props.title}</h1>
             
             <Row >
                 <Col xs={12} sm={8} className="project-header-col">
@@ -29,7 +29,7 @@ function ProjectHeader(props) {
                 </Col>
                 <Col xs={12} sm={4} className="project-header-col">
                     <h2>Collaborators: </h2>
-                    <div className="project-collaborators">{Object.keys(props.collaborators).map((item) => (<a className="project-collaborator" href={props.collaborators[item]}>{item}, </a>))}</div>
+                    <div className="project-collaborators">{Object.keys(props.collaborators).map((item, index) => (<a className="project-collaborator" href={props.collaborators[item]}>{item}{index<(Object.keys(props.collaborators).length-1) && (",")} </a>))}</div>
                 </Col>
             </Row>
             <Row >
