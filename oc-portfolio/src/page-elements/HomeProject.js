@@ -31,13 +31,13 @@ function HomeProject(props) {
         <div>
             <Row>
                 <Col xs={12} sm={6}>
-                    { props.video1 && !(iOS()) ? 
+                    { props.video1 ? 
                         <video className="home-video" autoPlay loop muted playsInline src={video_string1} type="video/mp4" ></video> : 
                         <Image className="home-image" fluid src={image_string1} alt=" " />
                     }
                 </Col>
                 <Col xs={12} sm={6}>
-                    { props.video2  && !(iOS()) ? 
+                    { props.video2 ? 
                         <video className="home-video"autoPlay loop muted playsInline src={video_string2} type="video/mp4" ></video> : 
                         <Image className="home-image" fluid src={image_string2} alt=" " />
                     }

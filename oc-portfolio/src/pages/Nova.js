@@ -124,7 +124,7 @@ function Nova(props) {
                 </Col>
                 <Col xs={12} md={6} className="project-col" id="test" id="dfa">
                     <h2 className="mta">Design for Assembly</h2>
-                    <div className="mb20 jt">Where possible features were designed with the aim of reducing assembly time, leading to a estimated assembly time of under 4 minutes. Snap-fits, self-locating features, JST connectors and having parts generally assemble from one direction were ways this was achieved.</div>
+                    <div className="mb20 jt">Where possible features were designed with the aim of reducing assembly time, leading to a estimated assembly time of under 4 minutes. Snap-fits, self-locating features, JST connectors and having most parts assemble from one direction were ways this was achieved.</div>
                     <ImageCarousel slug={slug} numImages={3} gallerySlug="gallery5" />
                 </Col>
                 <Col xs={12} className="project-col" >
