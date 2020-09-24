@@ -76,12 +76,12 @@ function Artops(props) {
             <h1 className="" id="develop">Technical Development</h1>
             <Row className="project-row">
                 <Col xs={12} md={6} className="project-col" id="ideation">
-                    <h2 className="mta">Ideation</h2>
+                    <h2>Ideation</h2>
                     <div className="mb20 jt">The robot was split into distinct sections - the shuffler, the dealer, the card platform / CV area, and the display. We first <strong>sketch ideated</strong> arrangements of the components and initial ideas for how the mechatronics might work.</div>
                     <Image className="project-image4" fluid src={`./media/${slug}/image3.png`} alt=" " />
                 </Col>
                 <Col xs={12} md={6} className="project-col" id="test" id="flow-chart">
-                    <h2 className="mta">System Flow Chart</h2>
+                    <h2>System Flow Chart</h2>
                     <div className="mb20 jt">We created a <strong>flow chart of the game end to end</strong>. This highlighted exactly what functionality each part needed. This helped guide me when I was writing the backend software and designing the UI of the robot.</div>
                     <Image className="project-image4" fluid src={`./media/${slug}/image4.png`} alt=" " />
                 </Col>
@@ -136,12 +136,12 @@ function Artops(props) {
             </Row>
             <Row className="project-row">
                 <Col xs={12} md={6} className="project-col" id="dfm">
-                    <h2 className="mta">Electronics</h2>
+                    <h2>Electronics</h2>
                     <div className="mb20 jt">I used <strong>prototype PCBs to create the shields</strong> for the Arduino and RPi. 3x TB6612FNG motor drivers were used in total to control the stepper and 3 DC motors. The Nema17 <strong>stepper motor was half stepped</strong> to provide a smooth and accurate motion. Cable sheathing was used to maintain a clean aesthetic.</div>
-                    <Image className="project-image1" fluid src={`./media/${slug}/image5.jpg`} alt=" " />
+                    <Image className="project-image4" fluid src={`./media/${slug}/image5.jpg`} alt=" " />
                 </Col>
                 <Col xs={12} md={6} className="project-col" id="test" id="dfa">
-                    <h2 className="mta">Computer Vision / Machine Learning</h2>
+                    <h2>Computer Vision / Machine Learning</h2>
                     <div className="mb20 jt">The robot has <strong>two webcams</strong> reading the value of every card dealt, to the player and to itself. <strong>OpenCV</strong> first processes the image of the top card, with a series of cropping and thresholding, down to just the top left rank then interprets it with a Tensorflow Lite model - a <strong>Keras neural network trained with a custom dataset</strong>.</div>
                     <ImageCarousel slug={slug} numImages={3} gallerySlug="gallery4" video={[1,]} />
                 </Col>

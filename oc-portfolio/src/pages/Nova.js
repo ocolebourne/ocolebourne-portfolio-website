@@ -26,12 +26,11 @@ function Nova(props) {
         "Electronics": "#electronics",
         "DFM": "#dfm",
         "DFA": "#dfa",
-        "Web Apps": "#webapp",
         "HCD": "#hcd",
         "UI/UX Design": "#ui",
         "Full-Stack Software": "#ui",
         "CAD": "#renders",
-        "Product Engineering": "#develop",
+        "System Design": "#webapp"
     }
 
     return (
@@ -118,12 +117,12 @@ function Nova(props) {
             </Row>
             <Row className="project-row">
                 <Col xs={12} md={6} className="project-col" id="dfm">
-                    <h2 className="mta">Design for Manufacture</h2>
+                    <h2>Design for Manufacture</h2>
                     <div className="mb20 jt">All plastic parts were designed for injection moulding, with the moulds for all but one part reduced to two parts. Solidworks was used for draft analysis and plastics simulations, to aid design. Bosses and ribbing were employed internally to maintain a constant wall thickness.</div>
                     <ImageCarousel slug={slug} numImages={4} video={[1,]} gallerySlug="gallery4" />
                 </Col>
                 <Col xs={12} md={6} className="project-col" id="test" id="dfa">
-                    <h2 className="mta">Design for Assembly</h2>
+                    <h2>Design for Assembly</h2>
                     <div className="mb20 jt">Where possible features were designed with the aim of reducing assembly time, leading to a estimated assembly time of under 4 minutes. Snap-fits, self-locating features, JST connectors and having most parts assemble from one direction were ways this was achieved.</div>
                     <ImageCarousel slug={slug} numImages={3} gallerySlug="gallery5" />
                 </Col>
@@ -149,14 +148,14 @@ function Nova(props) {
             </Row>
             <Row className="project-row">
                 <Col xs={12} md={6} className="project-col" >
-                    <h2 className="mta">Compliance</h2>
+                    <h2>Compliance</h2>
                     <div className="mb20 jt">Nova included product markings and considered factors such as disposal, to meet the rules and regulations for producing a child's electronic toy. Product markings as shown would be inlcuded in the moulds and embossed. The plastic parts are made from PLA so a '7' symbol is included.</div>
-                    <Image className="project-image1" fluid src={`./media/${slug}/image10.jpg`} alt=" " />
+                    <Image className="project-image4" fluid src={`./media/${slug}/image10.jpg`} alt=" " />
                 </Col>
                 <Col xs={12} md={6} className="project-col" id="test" >
-                    <h2 className="mta">Safety Online</h2>
+                    <h2>Safety Online</h2>
                     <div className="mb20 jt">Privacy and safety online is very important to parents. We were careful to design Nova in such a way that after the device was paired, code had to be physically run by the user and no data from, for example the camera, was ever uploaded from the device.</div>
-                    <Image className="project-image1" fluid src={`./media/${slug}/image9.jpg`} alt=" " />
+                    <Image className="project-image4" fluid src={`./media/${slug}/image9.jpg`} alt=" " />
                 </Col>
             </Row>
             <Row className="project-row">

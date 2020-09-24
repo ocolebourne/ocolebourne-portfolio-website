@@ -24,16 +24,17 @@ function IdeasLab(props) {
     }
 
     var skills = {
-        "React": "#electronics",
-        "Node": "#dfm",
-        "Express": "#dfm",
-        "JS": "#dfa",
-        "MongoDB": "#webapp",
+        "React": "#frontend",
+        "Node": "#backend",
+        "Express": "#backend",
+        "JS": "#full-stack",
+        "MongoDB": "#database",
+        "MQTT": "#mqtt",
         "Rest API": "#hcd",
-        "UI/UX Design": "#ui",
-        "Full-Stack Software": "#ui",
-        "3D printing": "#renders",
-        "ESP-32": "#renders",
+        "UI/UX Design": "#frontend",
+        "Full-Stack Software": "#full-stack",
+        "3D printing": "#",
+        "ESP-32": "#esp32",
     }
 
     return (
@@ -54,7 +55,7 @@ function IdeasLab(props) {
             <Row className="project-row" id="hcd">
                 <Col xs={12} md={6} className="project-col">
                     <h1 className="mta">Student Led Makerspace</h1>
-                    <div className="mba jt">100% student society led, the Ideas Lab is located in the heart of the South Kensington Imperial campus. The equipment focus is on digital manufacturing - including <strong>3D printing, laser cutting, CNCs and prototype electronics</strong>. The 6-figure project, partly sponsored by Autodesk, will be open for the next academic year (with COVID friendly adaptations).</div>
+                    <div className="mba jt">100% student society led, the Ideas Lab is located in the heart of the South Kensington Imperial campus. The equipment focus is on digital manufacturing - including <strong>3D printing, laser cutting, CNCs and prototype electronics</strong>. The 6-figure project, partly <strong>sponsored by Autodesk</strong>, will be open for the next academic year (with COVID friendly adaptations).</div>
 
 
                 </Col>
@@ -68,7 +69,7 @@ function IdeasLab(props) {
                 </Col>
                 <Col xs={12, { order: 'first' }} md={6, { order: 'last' }} className="project-col">
                     <h1 className="mta">IoT Enabled</h1>
-                    <div className="mb10 jt">We've built the space with IoT providing:</div>
+                    <div className="mb10 jt">We've built the space with IoT systems providing:</div>
                     <div className="mba" style={{ marginLeft: "30px" }}>
                         <div className="mb10 jt">> Permission based power control.</div>
                         <div className="mb10 jt">> Lab credits for material payment.</div>
@@ -83,84 +84,97 @@ function IdeasLab(props) {
             <h1 className="" id="develop">Key Features</h1>
             <Row className="project-row">
                 <Col xs={12} md={6} className="project-col" id="ideation">
-                    <h2 className="mta">Controlling Print Farm</h2>
-                    <div className="mb20 jt">15x Prusa printers, each connected to an <strong>OctoPi flashed Raspberry Pi</strong> can be controlled by our Web App. </div>
-                    <Image className="project-image4" fluid src={`./media/${slug}/image3.png`} alt=" " />
+                    <h2>Controlling Print Farm</h2>
+                    <div className="mb20 jt">15x Prusa printers, each connected to an <strong>OctoPi flashed Raspberry Pi</strong> can be controlled by the Web App. <strong>Users email their sliced .gcode files to the lab then can select the printer and start the print</strong>. Their lab credit is debited and they receive emails reminding them to collect the print, or if their print fails - for which a credit refund as a percentage of time completed is issued. </div>
+                    <ImageCarousel slug={slug} interval={14000} numImages={2} gallerySlug="gallery1" video={[1,]} />
                 </Col>
                 <Col xs={12} md={6} className="project-col" id="test" id="flow-chart">
-                    <h2 className="mta">System Flow Chart</h2>
-                    <div className="mb20 jt">We created a <strong>flow chart of the game end to end</strong>. This highlighted exactly what functionality each part needed. This helped guide me when I was writing the backend software and designing the UI of the robot.</div>
-                    <Image className="project-image4" fluid src={`./media/${slug}/image4.png`} alt=" " />
+                    <h2>Permission Based Power</h2>
+                    <div className="mb20 jt">For machines such as the Laser Cutter or CNC, there is a specific induction. Once the user has completed training they have permission and can <strong>scan their card by the machine</strong>. The <strong>tasmota smart plug</strong> paired with that scanner then turns on and the user is added to the logs. <strong>If a user doesn't have permission or isn't signed into the space they will be unable to turn it on</strong>.</div>
+                    <Image className="project-image4" fluid src={`./media/${slug}/image3.jpg`} alt=" " />
                 </Col>
             </Row>
             <Row className="project-row">
-                <Col xs={12} className="project-col" id="electronics" >
-                    <h2 className="">Shuffler</h2>
-                    <div className="mb10 jt">The user first places the pack into the card shuffler. We chose to use two DC motors which <strong>fired cards randomly from the top or bottom of the pack</strong> into the dealer.</div>
-                    <div className="mb10 jt">The initial versions had issues with ejecting the entire pack (too much weight from top and not enough angle), and with cards falling out of the front (not enough lip). <strong>Several iterations were made adjusting the angle of the pack and position of the driving wheels</strong>.</div>
-                    <div className="mba jt">Several versions of code were made, adjusting how long the wheels spun and how much <strong>retraction</strong> they had so that the whole pack didn't gradually get ejected.</div>
+                <Col xs={12} md={6} className="project-col" id="sign-in">
+                    <h2 className="">Sign-in / out & booking</h2>
+                    <div className="mb20 jt">Partcularily with COVID-19, its <strong>users must sign-in to the lab</strong>. If the lab is <strong>closed or at full occupancy, users are prevented from signing in</strong>. A calendly booking screen is provided to create a soft booking for the next half hour slot. When a student expert opens or closes the space, they change the <strong>'lab mode', controlling access to equipment and turning off all but overnight printers</strong>.</div>
+                    <Image className="project-image4" fluid src={`./media/${slug}/image4.jpg`} alt=" " />
                 </Col>
-                <Col xs={12} md={6} className="project-col">
-                    <ImageCarousel slug={slug} numImages={3} gallerySlug="gallery1" />
+                <Col xs={12} md={6} className="project-col" id="test" id="perm-power">
+                    <h2 className="">Material Shop and Lab Credit</h2>
+                    <div className="mb20 jt">Users <strong>buy Ideas Lab credit through an iPad and Square contactless card reader</strong>, or can have it added by a group leader as part of a project. Credit can <strong>pay for prints</strong> or be used to <strong>buy materials from the space's store</strong>. Users are <strong>emailed reciepts</strong> for all purchases - needed for reclaiming project budgets. A log of every transaction is kept for reference and can be exported to .csv.</div>
+                    <ImageCarousel slug={slug} interval={14000} numImages={2} gallerySlug="gallery2" video={[1, 2]} />
                 </Col>
-                <Col xs={12} md={6} className="project-col" >
-                    <div className="project-video1-cont">
-                        <video className="project-video1" autoPlay loop muted playsInline src={`./media/${slug}/shuffle.mp4`} type="video/mp4" ></video>
+            </Row>
+            <Row className="project-row">
+                <Col xs={12} md={6} className="project-col" id="sign-in">
+                    <h2>API Printer Integration</h2>
+                    <div className="mb20 jt">Printers such as the Raise3D and Formlabs don't have the same Octoprint integration. A user <strong>enters the details of their job manually</strong>, and once debited credit, is able to turn on the printer. An <strong>asynchonous polling loop runs on the Node server checking their apis for updates</strong>. This allows information to be fed into email reminders and the dashboard.  </div>
+                    <div className="mta project-video1-cont">
+                        <video className="project-video1" autoPlay loop muted playsInline src={`./media/${slug}/advance_print.mp4`} type="video/mp4" ></video>
                     </div>
                 </Col>
+                <Col xs={12} md={6} className="project-col" id="test" id="admin">
+                    <h2>Administration Panels</h2>
+                    <div className="mb20 jt"><strong>The space is led by 'student experts' who will manage member training, equipment, shop stock and be there to help solve any issues</strong>. Each section of the administration panels has <strong>filtering, and options such as selecting a group of users</strong> to add training or credit - to help tasks be completed quicker. <strong>Complete usage and transaction logs</strong> of the entire space are also available here.</div>
+                    <ImageCarousel slug={slug} interval={5000} numImages={4} gallerySlug="gallery3" video={[1,]} />
+                </Col>
+            </Row>
+            <h1 className="" id="develop">Technical Development</h1>
+            <div className="mb30 jt">
+                Colin, Hassaan and myself were <strong>responsible for the full-stack development</strong> of the system. I therefore gained experience of working in an agile software team, using tools such as <strong>Jira, Bitbucket (git) and Zepplin</strong> to assist our workflow and conducting daily stand-ups to keep the partially remote team on track. Throughout the project we documented the system and our process in a Wiki - with the <strong>aim of open-sourcing the project</strong> in the near future.
+            </div>
+            <Row className="project-row">
+                <Col xs={12} md={6} className="project-col" id="test" id="full-stack">
+                    <h2 className="">Full-stack Software</h2>
+                    <div className="mb20 jt">Before the placement <strong>I had never used JavaScript and had limited HTML / CSS knowledge</strong>. During the first 2-week sprint myself and others in the team <strong>taught ourselves React / Node & JS from scratch</strong>, enough to complete the topup Web App. Having completed the 8-week placement I am now at <strong>a competent level in JS, HTML and CSS; and experienced with React, Express, Node, Rest APIs, MQTT and MongoDB.</strong></div>
+                    <Image className="project-image4" fluid src={`./media/${slug}/image7.jpg`} alt=" " />
+                </Col>
+                <Col xs={12} md={6} className="project-col" id="frontend">
+                    <h2 className="">Front-end UX/UI</h2>
+                    <div className="mb20 jt">We used the <strong>React JavaScript library</strong> to create the front-end of our Web Apps. This <strong>suited the dynamic content</strong> that we were displaying. Zepplin was used to communicate final page designs between the team. React also allowed us to install a <strong>PWA version</strong> of our Web App onto the iPads.</div>
+                    <Image className="project-image4" fluid src={`./media/${slug}/image8.jpg`} alt=" " />
+                </Col>
             </Row>
             <Row className="project-row">
-                <Col xs={12} className="project-col" id="electronics" >
-                    <h2 className="">Dealer</h2>
-                    <div className="mb10 jt">After shuffling, the dealer moves to the correct position then deals one card at a time. We needed <strong>precise movement</strong> of the dealer so a <strong>stepper motor belt drive</strong> (similar to a 3D printer) was used. The two ends of the belt are connected by a grip om the bottom of the 3D printed dealer - adjustable as to not require a belt tensioner. A <strong>DC motor is used to deal cards</strong>.</div>
-                    <div className="mb10 jt">Initial iterations had issues with multiple cards being randomly dealt - fixed by adjusing the position of the drive wheel. Retraction was added in the code to pull the cards back in once dealt.</div>
-                    <div className="mba jt">When the robot was first fully assembled some of the cards from the shuffler missed the dealer. We modelled and laser cut a set of <strong>guides for the top of the dealer</strong>, fixing this.</div>
+                <Col xs={12} md={6} className="project-col" id="test" id="backend">
+                    <h2 className="">Back-end & REST API</h2>
+                    <div className="mb20 jt">The Web Apps use an <strong>Express framework for Node.js, acting as a REST API</strong>. Whenever React loads content for a users window, it will make several <strong>POST or GET requests</strong> to the backend server. Express handles these requests triggering JS functions to <strong>manipulate the database, contact external APIs, or contact equipment such as the plugs or printers</strong>.</div>
+                    <Image className="project-image4" fluid src={`./media/${slug}/image9.jpg`} alt=" " />
                 </Col>
-                <Col xs={12} md={6} className="project-col" >
-                    <div className="project-video1-cont">
-                        <video className="project-video1" autoPlay loop muted playsInline src={`./media/${slug}/belt_drive.mp4`} type="video/mp4" ></video>
+                <Col xs={12} md={6} className="project-col" id="database">
+                    <h2 className="">MongoDB Database</h2>
+                    <div className="mb20 jt">A <strong>NoSQL database</strong> was chosen since for collections such as the equipment info, each document had different pieces of data, it was <strong>not possible to have a fixed schema</strong>. It also provided us <strong>more flexibilty</strong> as the system developed. In some places a relational database would've been useful but the Node.js MongoDB driver handled the extra requests required quick enough. </div>
+                    <Image className="project-image4" fluid src={`./media/${slug}/image10.jpg`} alt=" " />
+                </Col>
+            </Row>
+            <Row className="project-row">
+                <Col xs={12} md={6} className="project-col" id="test" id="hosting">
+                    <h2 className="">Hosting</h2>
+                    <div className="mb20 jt">The plugs and printers needed to be contacted locally (within the secured Imperial College network) but the Square payment API needed an ssl certificate. Our solution to this was to <strong>split the Web App in two</strong>. The part handling <strong>local requests is hosted on our own subnet in the space, on a Raspberry Pi 4 8gb</strong>. The part requiring SSL <strong>handling payments is hosted remotely on heroku</strong>. The RPi uses PM2 and we set up remote pushing to its local git, via ssh. The MongoDB is hosted on AWS therefore accessed by both</div>
+                    <Image className="project-image4" fluid src={`./media/${slug}/image6.jpg`} alt=" " />
+                </Col>
+                <Col xs={12} md={6} className="project-col" id="esp32">
+                    <h2 className="">ESP-32 Card Scanners</h2>
+                    <div className="mb20 jt">I developed the circuit and code for an <strong>ESP-32 based card scanner</strong> that: read the first section of <strong>data from a College ID card</strong>; reordered the hex code bytes to match our USB readers; connected to the local wifi; <strong>POST requested the server with the decoded 10 digit card ID</strong>; provided a <strong>buzzer/LED notification</strong> based on the response. The scanners were housed in a 3D printed casing and were designed to be low cost since we needed several (~£12 each).</div>
+                    <ImageCarousel slug={slug} numImages={4} gallerySlug="gallery4" />
+                </Col>
+            </Row>
+            <Row className="project-row">
+                <Col xs={12} md={6} className="project-col" id="test" id="mqtt">
+                    <h2 className="">MQTT and Tasmota Smart-Plugs</h2>
+                    <div className="mb20 jt">Smart-plugs were <strong>flashed with Tasmota</strong> allowing reprogramming and MQTT connection. <strong>MQTT reduced the load on the local server</strong> since requests went via the RPi-based broker, and <strong>allowed for group commands</strong> (e.g. turning off all day-plugs). The plugs were reprogrammed so the physical button still turns the power off but not on (restricting access) - when clicked it publishes a message required for the server to complete the logs. Once connected to wifi the plugs were programmed to publish to an MQTT 'connected' topic every 2 minutes. The server is subscribed to this topic and therfore can determine if the plugs are online.</div>
+                    <div className="mta project-video1-cont">
+                        <video className="project-video1" autoPlay loop muted playsInline src={`./media/${slug}/plug_off.mp4`} type="video/mp4" ></video>
                     </div>
                 </Col>
-                <Col xs={12} md={6} className="project-col">
-                    <ImageCarousel slug={slug} numImages={4} gallerySlug="gallery2" />
+                <Col xs={12} md={6} className="project-col" id="security">
+                    <h2 className="">Security and Authentication</h2>
+                    <div className="mb20 jt">One benefit of hosting most of the Web App locally, and therefore it only being accessible inside the Imperial network (possible via College VPN), is security. Currently users login to the system with their college ID card which is secure enough for our application - but <strong>exposing the control of the printers, with this login, online would be unsafe</strong>. There is future plans to have more remote access and print queueing and for this a system such as the Imperial single sign in would be adopted. Once tapped in a <strong>JSWT is created and stored in local storage</strong>. This is used to continually <strong>authenticate the user via middleware</strong> when sensistive HTTP-request functions are called.</div>
+                    <Image className="project-image4" fluid src={`./media/${slug}/image11.jpg`} alt=" " />
                 </Col>
             </Row>
-            <Row className="project-row">
-                <Col xs={12} className="project-col" id="ui">
-                    <h2 className="">UI and Backend - <a href="https://github.com/ocolebourne/blackjack-robot">GitHub</a></h2>
-                    <div className="mb10 jt">ARTOPS runs on a <strong>Raspberry Pi 3B+ with a 3.5inch touchscreen display</strong>. Having started to learn <strong>PyQt5</strong>over summer I created a simple touch UI on top of a Python backened that ran the gameplay. The main script controlled both the UI and triggered the dealer, belt-drive and computer vision through <strong>class-based modules</strong>.</div>
-                    <div className="mb10 jt">The belt-drive kept track of its position with class attributes so that it didn't reach either end. Since the RPi 3B+ has only 2 hardware PWM channels, a simple solution to control the stepper and 3 seperate DC motors was to use an Arduino to control two of them. An Adafruit Circuit Express controlled the <strong>shuffling process and was triggered by serial communication</strong>. A returned handshake notified the Pi when shuffling was finished.</div>
-                    <div className="mba jt">ARTOPS decides its <strong>move based on the average score of cards left in the pack</strong> (based off only its own cards). Once a game is finished <strong>the winner ( player or robot) is stored in a text file</strong> so a running total can be displayed.</div>
-                </Col>
-                <Col xs={12} md={6} className="project-col" >
-                    <ImageCarousel slug={slug} numImages={3} gallerySlug="gallery3" />
-                </Col>
-                <Col xs={12} md={6} className="project-col">
-                    <div className="project-video1-cont">
-                        <video className="project-video1" autoPlay loop muted playsInline src={`./media/${slug}/ui.mp4`} type="video/mp4" ></video>
-                    </div>
-                </Col>
-            </Row>
-            <Row className="project-row">
-                <Col xs={12} md={6} className="project-col" id="dfm">
-                    <h2 className="mta">Electronics</h2>
-                    <div className="mb20 jt">I used <strong>prototype PCBs to create the shields</strong> for the Arduino and RPi. 3x TB6612FNG motor drivers were used in total to control the stepper and 3 DC motors. The Nema17 <strong>stepper motor was half stepped</strong> to provide a smooth and accurate motion. Cable sheathing was used to maintain a clean aesthetic.</div>
-                    <Image className="project-image1" fluid src={`./media/${slug}/image5.jpg`} alt=" " />
-                </Col>
-                <Col xs={12} md={6} className="project-col" id="test" id="dfa">
-                    <h2 className="mta">Computer Vision / Machine Learning</h2>
-                    <div className="mb20 jt">The robot has <strong>two webcams</strong> reading the value of every card dealt, to the player and to itself. <strong>OpenCV</strong> first processes the image of the top card, with a series of cropping and thresholding, down to just the top left rank then interprets it with a Tensorflow Lite model - a <strong>Keras neural network trained with a custom dataset</strong>.</div>
-                    <ImageCarousel slug={slug} numImages={3} gallerySlug="gallery4" video={[1,]} />
-                </Col>
-            </Row>
-            <Row className="project-row">
-                <Col xs={12} className="project-col" id="webapp">
-                    <h2 className="">Final Assembly</h2>
-                    <div className="mb10 jt"><strong>A full CAD assembly of components was created, for designing the laser cut acrylic casing</strong>. The shuffler and belt drive 3D printed pieces doubled up a structural components, holding faces of the box together. There was a strict size limit on the Gizmo Curio of XXXX, and so the arrangement of the components was crucial to achieve this. The final design had a clean aesthetic while <strong>exposing as much of the inner workings as possible.</strong></div>
-                    <div className="mba jt">For the internal card platform a section made from black acrylic, with a hinged door, <strong>hides the dealers cards from the player</strong> - to prevent cheating. At the end of the game the entire remaining deck is dispensed onto the player side platform - the design of which had to enable easy card removal while ensuring <strong>consistent card alignment for the computer vision system</strong>.</div>
-                    <Image className="project-image4" fluid src={`./media/${slug}/image6.png`} alt=" " />
-                </Col>
-            </Row>
+            
 
         </div>
     );

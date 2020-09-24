@@ -16,6 +16,7 @@ import Nova from './pages/Nova';
 import Artops from './pages/Artops';
 import About from './pages/About';
 import IdeasLab from './pages/IdeasLab';
+import Flow from './pages/Flow';
 
 function App() {
   const breakpoint = 575;
@@ -48,6 +49,7 @@ function App() {
               <Route path="/nova" component={() => <Nova topbar={!screenLarge} />} />
               <Route path="/ideaslab" component={() => <IdeasLab topbar={!screenLarge} />} />
               <Route path="/artops" component={() => <Artops topbar={!screenLarge} />} />
+              <Route path="/flow" component={() => <Flow topbar={!screenLarge} />} />
               <Route path="/" component={() => <h1>404 not found</h1>} />
             </Switch>
           </Col>

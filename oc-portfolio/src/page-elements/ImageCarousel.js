@@ -24,8 +24,9 @@ export default function ImageCarousel(props) {
 
         }
     };
+    const interval = props.interval || 3000;
     return (
-        <Carousel activeIndex={index} onSelect={handleSelect} interval={3000}>
+        <Carousel style={{marginTop:"auto"}} interval={interval} activeIndex={index} onSelect={handleSelect}>
             {images.map((item) => (
                 <Carousel.Item>
                     {item[0] === 0 ?
