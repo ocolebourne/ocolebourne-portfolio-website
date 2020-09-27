@@ -14,14 +14,15 @@ function HomeProject(props) {
     const video_string2=`./media/home/${props.slug+"2"}.mp4`
 
 
-    const iOS = () => {
+    const mobile = () => {
         return [
           'iPad Simulator',
           'iPhone Simulator',
           'iPod Simulator',
           'iPad',
           'iPhone',
-          'iPod'
+          'iPod',
+          'Android',
         ].includes(navigator.platform)
         // iPad on iOS 13 detection
         || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
@@ -43,18 +44,18 @@ function HomeProject(props) {
                     }
                 </Col>
             </Row>
-            <Row className="home-project-body">
+            <Row className="home-project-body" style={mobile ? {paddingBottom:"30px"} : {}}>
 
                     <Col className="animated fadeIn" xs={10} sm={11}><strong className="text-inline">{props.name}</strong><p className="text-inline">{props.desc}</p></Col>
                     <Col className="home-project-button-cont no-gutter"><a href={props.url}><Image className="home-project-button move-right" fluid src="./media/home/right-arrow.svg" alt=" "/></a></Col>
-                    {props.topbar ? <Col xs={12} style={{height:"50px"}}></Col> : null}
 
             </Row>
             <div style={{height:"50px"}}></div>
             
         </div>
     );
-
+    
 }
 
+// {mobile ? <Col xs={12} style={{height:"50px"}}></Col> : null}
 export default HomeProject;

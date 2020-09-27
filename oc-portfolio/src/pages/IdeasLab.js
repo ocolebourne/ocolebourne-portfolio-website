@@ -32,9 +32,11 @@ function IdeasLab(props) {
         "MQTT": "#mqtt",
         "Rest API": "#hcd",
         "UI/UX Design": "#frontend",
+        "System Design": "#dev",
         "Full-Stack Software": "#full-stack",
         "3D printing": "#",
         "ESP-32": "#esp32",
+        
     }
 
     return (
@@ -55,7 +57,8 @@ function IdeasLab(props) {
             <Row className="project-row" id="hcd">
                 <Col xs={12} md={6} className="project-col">
                     <h1 className="mta">Student Led Makerspace</h1>
-                    <div className="mba jt">100% student society led, the Ideas Lab is located in the heart of the South Kensington Imperial campus. The equipment focus is on digital manufacturing - including <strong>3D printing, laser cutting, CNCs and prototype electronics</strong>. The 6-figure project, partly <strong>sponsored by Autodesk</strong>, will be open for the next academic year (with COVID friendly adaptations).</div>
+                    <div className="mb10 jt">100% student society led, the Ideas Lab is located in the heart of the South Kensington Imperial campus. The equipment focus is on digital manufacturing - including <strong>3D printing, laser cutting, CNCs and prototype electronics</strong>. The 6-figure project, partly <strong>sponsored by Autodesk</strong>, will be open for the next academic year (with COVID friendly adaptations).</div>
+                    <div className="mba jt">The system was presented at the University of Sheffield <a href="https://unimaker.iforgesheffield.org/">‘UNIMAKER’ Academic Makerspace Conference 2020</a> and will be available shortly, open-source, for other makerspaces to utilise.</div>
 
 
                 </Col>
@@ -120,7 +123,7 @@ function IdeasLab(props) {
                     <ImageCarousel slug={slug} interval={5000} numImages={4} gallerySlug="gallery3" video={[1,]} />
                 </Col>
             </Row>
-            <h1 className="" id="develop">Technical Development</h1>
+            <h1 className="" id="dev">Technical Development</h1>
             <div className="mb30 jt">
                 Colin, Hassaan and myself were <strong>responsible for the full-stack development</strong> of the system. I therefore gained experience of working in an agile software team, using tools such as <strong>Jira, Bitbucket (git) and Zepplin</strong> to assist our workflow and conducting daily stand-ups to keep the partially remote team on track. Throughout the project we documented the system and our process in a Wiki - with the <strong>aim of open-sourcing the project</strong> in the near future.
             </div>
@@ -132,7 +135,7 @@ function IdeasLab(props) {
                 </Col>
                 <Col xs={12} md={6} className="project-col" id="frontend">
                     <h2 className="">Front-end UX/UI</h2>
-                    <div className="mb20 jt">We used the <strong>React JavaScript library</strong> to create the front-end of our Web Apps. This <strong>suited the dynamic content</strong> that we were displaying. Zepplin was used to communicate final page designs between the team. React also allowed us to install a <strong>PWA version</strong> of our Web App onto the iPads.</div>
+                    <div className="mb20 jt">We used the <strong>React JavaScript library</strong> to create the front-end of our Web Apps. This <strong>suited the dynamic content</strong> that we were displaying. Zeplin was used to communicate final page designs between the team. React also allowed us to install a <strong>PWA version</strong> of our Web App onto the iPads.</div>
                     <Image className="project-image4" fluid src={`./media/${slug}/image8.jpg`} alt=" " />
                 </Col>
             </Row>

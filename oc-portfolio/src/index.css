@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Noto Sans TC', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -95,6 +95,7 @@ h2 {
 .mb30 {
   margin-bottom:30px;
 }
+
 
 
 .mb20 {
@@ -442,13 +443,30 @@ h2 {
 }
 
 .about-tags{
+  margin-left:30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
 .about-image{
-  max-height:300px;
+
   object-fit: contain;
-  margin: 0px auto 0px 0px;
+  margin: 0px 0px auto 0px;
+}
+
+.about-tag{
+  padding: 4px 10px 4px 10px;
+  margin: 5px 10px 0px 0px;
+  border-radius:50px;
+  background-color: var(--project-white);
+  color: var(--project-black);
+  border: 2px solid var(--project-grey5);
+}
+
+.about-tag:hover {
+  border: 2px solid var(--project-grey2);
+  color: var(--project-grey5);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
 }
