@@ -14,7 +14,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Nova from './pages/Nova';
 import Artops from './pages/Artops';
-import About from './pages/About';
 import IdeasLab from './pages/IdeasLab';
 import Flow from './pages/Flow';
 
@@ -45,12 +44,11 @@ function App() {
           <Col className="main-container">
             <Switch>
               <Route path="/" exact component={() => <Home topbar={!screenLarge} />} />
-              <Route path="/about" component={() => <About topbar={!screenLarge} />} />
               <Route path="/nova" component={() => <Nova topbar={!screenLarge} />} />
               <Route path="/ideaslab" component={() => <IdeasLab topbar={!screenLarge} />} />
               <Route path="/artops" component={() => <Artops topbar={!screenLarge} />} />
               <Route path="/flow" component={() => <Flow topbar={!screenLarge} />} />
-              <Route path="/" component={() => <h1>404 not found</h1>} />
+              <Route path="/" component={() => {window.location.href = "/"}} />
             </Switch>
           </Col>
         </Row>

@@ -33,7 +33,7 @@ button {
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; 
     -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important; 
     outline: none !important;
-}
+} 
 
 
 code {
@@ -469,4 +469,8 @@ h2 {
   color: var(--project-grey5);
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
+}
+
+.bottom-spacer{
+  height: calc(100vh - 160px - 407px)
 }

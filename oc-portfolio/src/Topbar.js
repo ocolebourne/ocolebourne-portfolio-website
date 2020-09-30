@@ -14,7 +14,7 @@ function Topbar() {
         <div>
             <div className="topbar-container">
                 <div><a className="a-grey name-logo" href="/">Oliver Colebourne</a></div>
-                <div><a className="a-grey" href="/about">About me</a></div>
+                <div><a className="a-grey" href="/#about">About me</a></div>
             </div>
         </div>
     );

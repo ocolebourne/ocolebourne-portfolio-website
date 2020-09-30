@@ -29,13 +29,14 @@ function About(props) {
           <div className="mta mb10 jt">Links:</div>
           <div className="mb30 about-tags">
             <button onClick={() => window.location.href = "/Oliver_Colebourne_CV.pdf"} className="about-tag">Link to my CV</button>
+            <button onClick={() => window.location.href = "/"} className="about-tag">My Portfolio</button>
             <button onClick={() => window.location.href = "https://www.linkedin.com/in/olivercolebourne/"} className="about-tag">LinkedIn</button>
             <button onClick={() => window.location.href = "https://github.com/ocolebourne/"} className="about-tag">Github</button>
 
           </div>
           <div className="mta mb10 jt">Contact:</div>
           <div className="" style={{marginLeft:"30px"}}>
-            <div className="mb10 jt"><a href="mailto:omcolebourne@gmail.com">Email: omcolebourne@gmail.com</a></div>
+            <div className="mb10 jt">Email: <a href="mailto:omcolebourne@gmail.com">omcolebourne@gmail.com</a></div>
             <div className="jt">Phone: +447748603168</div>
           </div>
         </Col>

@@ -61,7 +61,7 @@ function Artops(props) {
             <Row className="project-row">
                 <Col xs={12} md={6} className="project-col">
                     <h1 className="mta">ARTOPS - A Robotic Twenty One Playing System</h1>
-                    <div className="mb10 jt">Twenty-one or Blackjack is a card game in which players are first dealt two cards. They then can either 'hit' taking more cards or 'stick' with the cards they have - but if their cards add up to a value over 21 they go 'bust'. The player with a final total closest to 21, wins.</div>
+                    <div className="mb10 jt">Twenty-one or Blackjack is a card game in which players are first dealt two cards. They then can either 'hit' taking more cards or 'stick' with the cards they have, aiming for a final total closest to 21 - but if their cards add up to a value over 21 they go 'bust'.</div>
                     <div className="mba jt">Our robot aimed to <strong>play a full game of blackjack with a user, using standard playing cards</strong>. This involved shuffling the pack, dealing the user and itself two cards, handling the hit or stick action, and keeping track of all the cards to decide its own action and to display the score and result.</div>
                 </Col>
                 <Col xs={12} md={6} className="project-col" style={{ textAlign: "center" }}>
