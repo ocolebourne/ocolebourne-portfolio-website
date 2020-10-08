@@ -474,3 +474,9 @@ h2 {
 .bottom-spacer{
   height: calc(100vh - 160px - 407px)
 }
+
+@media only screen and (max-width: 768px) {
+  .bottom-spacer{
+    height: calc(100vh - 160px - 644.06px) !important;
+  }
+}
