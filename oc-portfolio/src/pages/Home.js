@@ -22,8 +22,10 @@ function Home(props) {
         <HomeProject slug="ilab" name="Ideas Lab" desc=" is a new smart IoT enabled makerspace at Imperial College London, sponsored by Autodesk - 2020 placement: full stack developer." url="/ideaslab" topbar={props.topbar} />
         <HomeProject slug="flow" name="Flow" desc=" is an iot system giving managers insights from around their store - under development as Deana Consultants working with LEON Restaurants." url="/flow" topbar={props.topbar} />
         <HomeProject slug="artops" name="Artops" desc=" is a bot that plays an entire game of blackjack against a user." url="/artops" topbar={props.topbar} video2/>
+        <HomeProject slug="more" name="More Projects" desc=" - Further projects with short write-ups" url="/more" topbar={props.topbar} video2/>
+
         <div style={{height:"160px"}} id="about"></div>
-        <Row className="project-row" >
+        <Row className="project-row">
         <Col xs={5} md={5} lg={3} className="project-col" style={{ textAlign: "center" }}>
           <Image className="mba about-image" fluid src={`./media/about/profile.jpg`} alt=" " />
         </Col>
