@@ -1,0 +1,13 @@
+[debug] [2020-10-15T22:36:04.343Z] ----------------------------------------------------------------------
+[debug] [2020-10-15T22:36:04.348Z] Command:       C:\Users\Oliver\DOWNLO~1\firebase-tools-instant-win.exe C:\Users\Oliver\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\bin\firebase deploy
+[debug] [2020-10-15T22:36:04.350Z] CLI Version:   8.7.0
+[debug] [2020-10-15T22:36:04.350Z] Platform:      win32
+[debug] [2020-10-15T22:36:04.350Z] Node Version:  v12.18.1
+[debug] [2020-10-15T22:36:04.353Z] Time:          Thu Oct 15 2020 23:36:04 GMT+0100 (British Summer Time)
+[debug] [2020-10-15T22:36:04.354Z] ----------------------------------------------------------------------
+[debug] [2020-10-15T22:36:04.354Z] 
+[debug] [2020-10-15T22:36:04.427Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-10-15T22:36:04.428Z] > authorizing via signed-in user
+[debug] [2020-10-15T22:36:04.428Z] [iam] checking project oliver-colebourne for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-10-15T22:36:04.437Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/oliver-colebourne:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}

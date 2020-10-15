@@ -10,7 +10,7 @@ export default function YoutubePlayer(props){
           src={`https://www.youtube.com/embed/${props.youtubeId}`}
           frameBorder="0"
           allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
-          allowFullscreen="1"
+          allowFullScreen="1"
         />
       </div>
     );
