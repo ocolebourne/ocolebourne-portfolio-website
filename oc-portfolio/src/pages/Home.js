@@ -16,7 +16,7 @@ function Home(props) {
     return (
       <div>
         {props.topbar ? <div className="topbar-spacer"></div> : <div className="sidebar-spacer"></div> }
-        <div className="home-header">Design engineer skilled at complete development of technical products from problem to fruition. Currently based in London studying at Imperial College, Dyson School of Design Engineering. This portfolio was <a href="https://github.com/ocolebourne/ocolebourne-portfolio-website">coded from scratch</a> using React.js - welcome!</div>
+        <div className="home-header">Design engineer skilled at development of technical products from problem to fruition. Currently based in London studying at Imperial College, Dyson School of Design Engineering. This portfolio was <a href="https://github.com/ocolebourne/ocolebourne-portfolio-website">coded from scratch</a> using React.js - welcome!</div>
         <h1>PROJECTS</h1>
         <HomeProject slug="nova" name="Nova" desc=" is a bot, coded through a web-app that makes Python programming engaging for 10-14 year olds through physical input and output." url="/nova" topbar={props.topbar} />
         <HomeProject slug="ilab" name="Ideas Lab" desc=" is a new smart IoT enabled makerspace at Imperial College London, sponsored by Autodesk - 2020 placement: full stack developer." url="/ideaslab" topbar={props.topbar} />
@@ -29,7 +29,7 @@ function Home(props) {
         </Col>
         <Col xs={12} md={7} lg={9} className="project-col">
           <div className="mb10 jt">Hello! I am a design engineer skilled at complete development of technical products from problem to fruition. Currently based in London I am studying at Imperial College, Dyson School of Design Engineering. </div>
-          <div className="mb10 jt"><strong>I am in the penultimate year of a 4-year MEng, and open to placement opportunities (6 month) between April and September 2021</strong>.</div>
+          <div className="mb10 jt"><strong>I am in the penultimate year of a 4-year MEng, and looking for opportunities for my 6-month placement starting in April 2021</strong>.</div>
           <div className="mb30 jt">As well as technology, I enjoy cycling, running and <a href="https://olliecolebourne.tumblr.com">photography</a>.</div>
           <div className="mta mb10 jt">Links:</div>
           <div className="mb30 about-tags">
