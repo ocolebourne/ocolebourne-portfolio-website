@@ -11,6 +11,7 @@ import { StickyContainer, Sticky } from 'react-sticky';
 import ProjectHeader from "../page-elements/ProjectHeader";
 import YoutubePlayer from '../page-elements/YoutubePlayer';
 import ImageCarousel from '../page-elements/ImageCarousel';
+import NextProject from '../page-elements/NextProject';
 
 function Flow(props) {
 
@@ -48,6 +49,7 @@ function Flow(props) {
                 completed="February 2020 - Present"
                 skills={skills}
             />
+            <NextProject name="Artops" url="/artops" />
         </div>
     );
 

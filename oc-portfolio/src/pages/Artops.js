@@ -11,6 +11,7 @@ import { StickyContainer, Sticky } from 'react-sticky';
 import ProjectHeader from "../page-elements/ProjectHeader";
 import YoutubePlayer from '../page-elements/YoutubePlayer';
 import ImageCarousel from '../page-elements/ImageCarousel';
+import NextProject from '../page-elements/NextProject';
 
 function Artops(props) {
 
@@ -154,6 +155,7 @@ function Artops(props) {
                     <Image className="project-image4" fluid src={`./media/${slug}/image6.png`} alt=" " />
                 </Col>
             </Row>
+            <NextProject name="Nova" url="/nova" />
 
         </div>
     );

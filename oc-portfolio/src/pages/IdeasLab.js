@@ -11,6 +11,7 @@ import { StickyContainer, Sticky } from 'react-sticky';
 import ProjectHeader from "../page-elements/ProjectHeader";
 import YoutubePlayer from '../page-elements/YoutubePlayer';
 import ImageCarousel from '../page-elements/ImageCarousel';
+import NextProject from '../page-elements/NextProject';
 
 function IdeasLab(props) {
 
@@ -177,6 +178,7 @@ function IdeasLab(props) {
                     <Image className="project-image4" fluid src={`./media/${slug}/image11.jpg`} alt=" " />
                 </Col>
             </Row>
+            <NextProject name="LEON Flow" url="/flow" />
             
 
         </div>

@@ -11,6 +11,7 @@ import { StickyContainer, Sticky } from 'react-sticky';
 import ProjectHeader from "../page-elements/ProjectHeader";
 import YoutubePlayer from '../page-elements/YoutubePlayer';
 import ImageCarousel from '../page-elements/ImageCarousel';
+import NextProject from '../page-elements/NextProject';
 
 function Nova(props) {
 
@@ -18,8 +19,8 @@ function Nova(props) {
 
     var collaborators = {
         "Patrick McGuckian": "https://www.pdmcguckian.com",
-        "Noor Ali": "https://www.google.co.uk",
-        "Emily Tang": "https://www.google.co.uk",
+        "Noor Ali": "https://www.nooralidesigns.com/",
+        "Emily Tang": "https://uk.linkedin.com/in/emily-tang59",
     }
 
     var skills = {
@@ -180,6 +181,7 @@ function Nova(props) {
                     <YoutubePlayer youtubeId="AhwYanA9ypc" />
                 </Col>
             </Row>
+            <NextProject name="Ideas Lab" url="/ideaslab" />
 
         </div>
     );
