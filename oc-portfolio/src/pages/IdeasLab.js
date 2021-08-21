@@ -178,7 +178,7 @@ function IdeasLab(props) {
                     <Image className="project-image4" fluid src={`./media/${slug}/image11.jpg`} alt=" " />
                 </Col>
             </Row>
-            <NextProject name="LEON Flow" url="/flow" />
+            <NextProject name="Artops" url="/artops" />
             
 
         </div>

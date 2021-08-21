@@ -16,6 +16,7 @@ import Nova from './pages/Nova';
 import Artops from './pages/Artops';
 import IdeasLab from './pages/IdeasLab';
 import Flow from './pages/Flow';
+import Foto from './pages/Foto';
 
 function App() {
   const breakpoint = 575;
@@ -47,7 +48,7 @@ function App() {
               <Route path="/nova" component={() => <Nova topbar={!screenLarge} />} />
               <Route path="/ideaslab" component={() => <IdeasLab topbar={!screenLarge} />} />
               <Route path="/artops" component={() => <Artops topbar={!screenLarge} />} />
-              <Route path="/flow" component={() => <Flow topbar={!screenLarge} />} />
+              <Route path="/foto" component={() => <Foto topbar={!screenLarge} />} />
               <Route path="/cv" component={() => {window.location.href = "/Oliver_Colebourne_CV.pdf"}} />
               <Route path="/" component={() => {window.location.href = "/"}} />
             </Switch>

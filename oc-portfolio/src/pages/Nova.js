@@ -181,7 +181,7 @@ function Nova(props) {
                     <YoutubePlayer youtubeId="AhwYanA9ypc" />
                 </Col>
             </Row>
-            <NextProject name="Ideas Lab" url="/ideaslab" />
+            <NextProject name="Foto" url="/foto" />
 
         </div>
     );

@@ -495,3 +495,7 @@ h2 {
     height: calc(100vh - 160px - 644.06px) !important;
   }
 }
+
+.foto-orange {
+  color: rgb(242,145,96);
+}

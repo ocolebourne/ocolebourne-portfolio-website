@@ -28,13 +28,17 @@ function ProjectHeader(props) {
                     <div>{props.desc}</div>
                 </Col>
                 <Col xs={12} sm={4} className="project-header-col">
+                    {props.solo ? <><h2>Type:</h2><div className="project-collaborators">Solo Project</div></> :
+                    <>
                     <h2>Collaborators: </h2>
                     <div className="project-collaborators">{Object.keys(props.collaborators).map((item, index) => (<a className="project-collaborator" href={props.collaborators[item]}>{item}{index<(Object.keys(props.collaborators).length-1) && (",")} </a>))}</div>
+                    </>
+                    }
                 </Col>
             </Row>
             <Row >
                 <Col xs={12} sm={8} className="project-header-col">
-                    <h2 style={{marginBottom:"-2px"}}>Skills Explored:</h2>
+                    <h2 style={{marginBottom:"-2px"}}>Skills explored:</h2>
                     <div className="project-tags">
                         {Object.keys(props.skills).map((skill) => (
                             <button onClick={() => window.location.href = props.skills[skill]} className="project-tag">{skill}</button>
