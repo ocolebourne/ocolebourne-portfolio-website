@@ -15,7 +15,7 @@ import Col from 'react-bootstrap/Col';
 import Nova from './pages/Nova';
 import Artops from './pages/Artops';
 import IdeasLab from './pages/IdeasLab';
-import Flow from './pages/Flow';
+import Opaque from './pages/Opaque';
 import Foto from './pages/Foto';
 
 function App() {
@@ -36,6 +36,7 @@ function App() {
 
   return (
     <Router>
+      
       {screenLarge ? null : <Topbar />}
       <Container fluid>
 
@@ -46,6 +47,7 @@ function App() {
             <Switch>
               <Route path="/" exact component={() => <Home topbar={!screenLarge} />} />
               <Route path="/nova" component={() => <Nova topbar={!screenLarge} />} />
+              <Route path="/opaque" component={() => <Opaque topbar={!screenLarge} />} />
               <Route path="/ideaslab" component={() => <IdeasLab topbar={!screenLarge} />} />
               <Route path="/artops" component={() => <Artops topbar={!screenLarge} />} />
               <Route path="/foto" component={() => <Foto topbar={!screenLarge} />} />
