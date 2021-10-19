@@ -10,23 +10,25 @@ import Image from "react-bootstrap/Image";
 import { StickyContainer, Sticky } from "react-sticky";
 
 function Home(props) {
-  // <HomeProject
-  //     slug="opaque"
-  //     name="Opaque"
-  //     desc=" is a system to minimise, understand and control your 2040 home's data leakage."
-  //     url="/opaque"
-  //     topbar={props.topbar}
-  // />
-  return (
-      <div>
+    return (
+        <div>
+            <title>O. Colebourne - Portfolio</title>
             {props.topbar ? <div className="topbar-spacer"></div> : <div className="sidebar-spacer"></div>}
             <div className="home-header">
                 Design engineer skilled at development of technical products from problem to fruition. Currently based in London studying at
                 Imperial College, Dyson School of Design Engineering. This portfolio was{" "}
-                <a href="https://github.com/ocolebourne/ocolebourne-portfolio-website">coded from scratch</a> using React.js - welcome!
+                <a href="https://github.com/ocolebourne/ocolebourne-portfolio-website" target="_blank">coded from scratch</a> using React.js - welcome!
             </div>
             <h1>PROJECTS</h1>
 
+            <HomeProject
+                slug="opaque"
+                name="Opaque"
+                desc=" is a system to minimise, understand and control your 2040 home's data leakage."
+                url="/opaque"
+                topbar={props.topbar}
+                video1
+            />
             <HomeProject
                 slug="nova"
                 name="Nova"

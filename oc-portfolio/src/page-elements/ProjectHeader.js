@@ -16,6 +16,7 @@ function ProjectHeader(props) {
 
     return (
         <div className="project-header">
+            <title>O. Colebourne - {props.title}</title>
             <div className="project-header-image">
                 <Image fluid src={header_image} alt=" " />
             </div>

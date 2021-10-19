@@ -59,7 +59,7 @@ function IdeasLab(props) {
                 <Col xs={12} md={6} className="project-col">
                     <h1 className="mta">Student Led Makerspace</h1>
                     <div className="mb10 jt">100% student society led, the Ideas Lab is located in the heart of the South Kensington Imperial campus. The space includes <strong>3D printing, laser cutting, CNCs and prototype electronics</strong>. The 6-figure project, partly <strong>sponsored by Autodesk</strong>, was opened for the 2020 academic year (with COVID friendly adaptations).</div>
-                    <div className="mba jt">The system was presented at the University of Sheffield <a href="https://unimaker.iforgesheffield.org/">‘UNIMAKER’ Academic Makerspace Conference 2020</a> and will be available shortly, open-source, for other makerspaces to utilise.</div>
+                    <div className="mba jt">The system was presented at the University of Sheffield <a href="https://unimaker.iforgesheffield.org/" target="_blank">‘UNIMAKER’ Academic Makerspace Conference 2020</a> and will be available shortly, open-source, for other makerspaces to utilise.</div>
 
 
                 </Col>

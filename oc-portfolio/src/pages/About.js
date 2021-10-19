@@ -25,7 +25,7 @@ function About(props) {
         <Col xs={12} md={7} lg={9} className="project-col">
           <div className="mb10 jt">Hello! I am a design engineer skilled at complete development of technical products from problem to fruition. Currently based in London I am studying at Imperial College, Dyson School of Design Engineering. </div>
           <div className="mb10 jt"><strong>I am in the penultimate year of a 4-year MEng, and open to placement opportunities (6 month) between April and September 2021</strong>.</div>
-          <div className="mb30 jt">As well as technology, I enjoy cycling, running and <a href="https://olliecolebourne.tumblr.com">photography</a>.</div>
+          <div className="mb30 jt">As well as technology, I enjoy cycling, running and <a href="https://olliecolebourne.tumblr.com" target="_blank">photography</a>.</div>
           <div className="mta mb10 jt">Links:</div>
           <div className="mb30 about-tags">
             <button onClick={() => window.location.href = "/Oliver_Colebourne_CV.pdf"} className="about-tag">Link to my CV</button>
