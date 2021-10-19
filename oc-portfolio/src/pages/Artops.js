@@ -19,7 +19,7 @@ function Artops(props) {
     var desc = "Robot that plays an entire game of blackjack against a user - shuffling & dealing cards, reading their values, and deciding to hit or stick while communicating with the user."
 
     var collaborators = {
-        "Patrick McGuckian": "https://www.pdmcguckian.com",
+        "Patrick D. McGuckian": "https://www.pdmcguckian.com",
     }
 
     var skills = {

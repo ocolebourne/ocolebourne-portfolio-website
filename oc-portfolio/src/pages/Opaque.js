@@ -23,7 +23,7 @@ function Opaque(props) {
     var collaborators = {
         "Alex Gibson": "https://alexandercgibson.com/",
         "Ted Kane": "https://tedkane.design/",
-        "Patrick McGuckian": "https://www.pdmcguckian.com",
+        "Patrick D. McGuckian": "https://www.pdmcguckian.com",
         "Jack Polturak": "https://jackpolturak.com/",
     };
 

@@ -21,7 +21,7 @@ function Nova(props) {
     var [rMore3, setRMore3] = useState(false);
 
     var collaborators = {
-        "Patrick McGuckian": "https://www.pdmcguckian.com",
+        "Patrick D. McGuckian": "https://www.pdmcguckian.com",
         "Noor Ali": "https://www.nooralidesigns.com/",
         "Emily Tang": "https://uk.linkedin.com/in/emily-tang59",
     };
@@ -123,7 +123,7 @@ function Nova(props) {
             <div className="mb30 jt">
                 This University module focussed on the physical development of a handheld battery-powered product, from compliance to DFMA.
                 We also chose to develop the software for Nova. Due to the COVID-19 pandemic, the physical prototyping aspect of the module
-                was cancelled and would not be graded. However, Patrick McGuckian and I continued to build a fully functioning prototype
+                was cancelled and would not be graded. However, Patrick and I continued to build a fully functioning prototype
                 from home.
             </div>
             <video
