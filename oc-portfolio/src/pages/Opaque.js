@@ -28,7 +28,9 @@ function Opaque(props) {
     };
 
     var skills = {
-        Electronics: "#electronics",
+        "System Design": "#sys",
+        "HCD": "#HCD",
+        "Product Development": "#product"
     };
 
     return (
@@ -98,7 +100,7 @@ function Opaque(props) {
                 </Col>
             </Row>
 
-            <Row className="project-row" id="">
+            <Row className="project-row" id="HCD">
                 <Col xs={12} md={6} className="project-col">
                     <h1 className="mta">Discretising Privacy</h1>
                     <div className="mba">
@@ -111,13 +113,13 @@ function Opaque(props) {
                     <ImageCarousel slug={slug} numImages={2} gallerySlug="gallery1" video={[1]} interval={10000} />
                 </Col>
             </Row>
-            <Row className="project-row" id="">
+            <Row className="project-row" id="product">
                 <Col xs={{ span: 12, order: "first" }} md={{ span: 6, order: "first" }} className="project-col">
                     <h1 className="mta">Identifying data</h1>
                     <div className="mba">
                         It was important that our system could work for any device, no matter if the manufacturer wanted it to or not.
-                        Following a literature review of current technologies, we designed a method of <b>Deep Packet Inspection</b> to
-                        classify the category of each 'data packet'. In order to make our system completely private by design we wanted to
+                        Following a literature review of current technologies, Patrick and I designed a system utilising <b>deep packet inspection</b> to
+                        classify the category of each piece of data leaving the home. In order to make our system completely private by design we wanted to
                         omit any learning from a users devices/data, therefore any 'fingerprinting' for devices would come from our own
                         research labs.
                     </div>
@@ -143,7 +145,7 @@ function Opaque(props) {
             </Row>
 
             <h1 className="mta">Opaque privacy system</h1>
-            <Row className="project-row" id="">
+            <Row className="project-row" id="sys">
                 <Col xs={12} md={4} className="project-col">
                     <h2 className="mta">Local processing</h2>
                     <div className="mba">
@@ -186,7 +188,7 @@ function Opaque(props) {
                     </a>
                 </Col>
             </Row>
-            <NextProject name="Ideas Lab" url="/ideaslab" />
+            <NextProject name="Nova" url="/nova" />
         </div>
     );
 }
