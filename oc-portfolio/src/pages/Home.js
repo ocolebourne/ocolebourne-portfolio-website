@@ -8,6 +8,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import { StickyContainer, Sticky } from "react-sticky";
+import HomeDoubleProject from "../page-elements/HomeDoubleProject";
 
 function Home(props) {
     return (
@@ -15,12 +16,29 @@ function Home(props) {
             <title>O. Colebourne - Portfolio</title>
             {props.topbar ? <div className="topbar-spacer"></div> : <div className="sidebar-spacer"></div>}
             <div className="home-header">
-                Design engineer skilled at development of technical products from problem to fruition. Currently based in London studying at
-                Imperial College, Dyson School of Design Engineering. This portfolio was{" "}
-                <a href="https://github.com/ocolebourne/ocolebourne-portfolio-website" target="_blank">coded from scratch</a> using React.js - welcome!
+                Design engineer skilled at development of technical products from problem to fruition. Currently based in London working on
+                two ventures, co-founded out of university. This portfolio's source code can be found{" "}
+                <a href="https://github.com/ocolebourne/ocolebourne-portfolio-website" target="_blank">
+                    here
+                </a>{" "}
+                - welcome!
             </div>
-            <h1>PROJECTS</h1>
+            <h1>CURRENT</h1>
+            <HomeDoubleProject
+                slug1="polarise"
+                name1="Polarise"
+                desc1=" is giving founders IT superpowers."
+                url1="https://polarise.dev"
+                external1
+                slug2="teamrepair"
+                name2="Team Repair"
+                desc2=" is teaching kids STEM while repairing real electronic gadgets, in order to Fix the Future."
+                url2="https://team.repair"
+                topbar={props.topbar}
+                external2
+            />
 
+            <h1>PAST PROJECTS</h1>
             <HomeProject
                 slug="opaque"
                 name="Opaque"
@@ -66,17 +84,13 @@ function Home(props) {
                 </Col>
                 <Col xs={12} md={7} lg={9} className="project-col">
                     <div className="mb10 jt">
-                        Hello! I am a design engineer skilled at complete development of technical products from problem to fruition.
-                        Currently based in London I am studying at Imperial College, Dyson School of Design Engineering.{" "}
-                    </div>
-                    <div className="mb10 jt">
-                        <strong>
-                            I am in the penultimate year of a 4-year MEng, and always open to hearing about new opportunities - please reach
-                            out!
-                        </strong>
+                        Hello! I am a design engineer skilled at complete development of technical products from problem to fruition. I
+                        recently graduated with a Masters degree (MEng) from Imperial College London, Dyson School of Design Engineering.
+                        I'm now in London working on two ventures I co-founded out of university, as CTO for{" "}
+                        <a href="https://polarise.dev">Polarise</a> and part-time for <a href="https://team.repair">Team Repair.</a>{" "}
                     </div>
                     <div className="mb30 jt">
-                        As well as technology, I enjoy cycling, running and <a href="https://olliecolebourne.tumblr.com">photography</a>.
+                        As well as technology, I also enjoy <a href="https://olliecolebourne.tumblr.com">photography</a>.
                     </div>
                     <div className="mta mb10 jt">Links:</div>
                     <div className="mb30 about-tags">
