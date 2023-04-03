@@ -9,15 +9,24 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import { StickyContainer, Sticky } from "react-sticky";
 import HomeDoubleProject from "../page-elements/HomeDoubleProject";
+import Publications from "../page-elements/Publications";
 
 function Home(props) {
+    const mobile = () => {
+        return (
+            ["iPad Simulator", "iPhone Simulator", "iPod Simulator", "iPad", "iPhone", "iPod", "Android"].includes(navigator.platform) ||
+            // iPad on iOS 13 detection
+            (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+        );
+    };
     return (
         <div>
             <title>O. Colebourne - Portfolio</title>
             {props.topbar ? <div className="topbar-spacer"></div> : <div className="sidebar-spacer"></div>}
             <div className="home-header">
-                Design engineer skilled at development of technical products from problem to fruition. Currently based in London working on
-                two ventures, co-founded out of university. This portfolio's source code can be found{" "}
+                Design engineer, specialised in full-stack software engineering. Skilled at the development of technical products from
+                problem to fruition. Currently based in London acting as CTO for two ventures I co-founded out of university. This
+                portfolio's source code can be found{" "}
                 <a href="https://github.com/ocolebourne/ocolebourne-portfolio-website" target="_blank">
                     here
                 </a>{" "}
@@ -25,10 +34,10 @@ function Home(props) {
             </div>
             <h1>CURRENT</h1>
             <HomeDoubleProject
-                slug1="polarise"
-                name1="Polarise"
-                desc1=" is giving founders IT superpowers."
-                url1="https://polarise.dev"
+                slug1="attic"
+                name1="Attic"
+                desc1=" is making onboarding, managing and revoking employees' SaaS apps a breeze."
+                url1="https://useattic.com"
                 external1
                 slug2="teamrepair"
                 name2="Team Repair"
@@ -76,6 +85,9 @@ function Home(props) {
                 topbar={props.topbar}
                 video2
             />
+            <h1>MEDIA COVERAGE</h1>
+            <Publications />
+
             <div className="home-viewmore"></div>
             <div style={{ height: "160px" }} id="about"></div>
             <Row className="project-row">
@@ -84,19 +96,30 @@ function Home(props) {
                 </Col>
                 <Col xs={12} md={7} lg={9} className="project-col">
                     <div className="mb10 jt">
-                        Hello! I am a design engineer skilled at complete development of technical products from problem to fruition. I
-                        recently graduated with a Masters degree (MEng) from Imperial College London, Dyson School of Design Engineering.
-                        I'm now in London working on two ventures I co-founded out of university, as CTO for{" "}
-                        <a href="https://polarise.dev">Polarise</a> and part-time for <a href="https://team.repair">Team Repair.</a>{" "}
+                        Hello! I'm a design engineer skilled at complete development of technical products from problem to fruition. I'm
+                        specialised in full-stack software development and have product managed multiple web and mobile projects - including
+                        building the Team Repair app for Apple, Android and Amazon Fire{" "}
+                        <a href="https://join.team.repair/download" target="_blank">
+                            app stores
+                        </a>
+                        . In 2022, I graduated from Imperial College London with a Masters degree (MEng) in Design Engineering, then
+                        co-founded two ventures which I'm working on now as CTO -{" "}
+                        <a href="https://useattic.com" target="_blank">
+                            Attic
+                        </a>{" "}
+                        and{" "}
+                        <a href="https://team.repair" target="_blank">
+                            Team Repair.
+                        </a>{" "}
                     </div>
                     <div className="mb30 jt">
                         As well as technology, I also enjoy <a href="https://olliecolebourne.tumblr.com">photography</a>.
                     </div>
-                    <div className="mta mb10 jt">Links:</div>
+                    <h2 className="mta mb10 jt">Links:</h2>
                     <div className="mb30 about-tags">
-                        <button onClick={() => (window.location.href = "/Oliver_Colebourne_CV.pdf")} className="about-tag">
+                        {/* <button onClick={() => (window.location.href = "/Oliver_Colebourne_CV.pdf")} className="about-tag">
                             Link to my CV
-                        </button>
+                        </button> */}
                         <button
                             onClick={() => (window.location.href = "https://www.linkedin.com/in/olivercolebourne/")}
                             className="about-tag"
@@ -107,12 +130,40 @@ function Home(props) {
                             Github
                         </button>
                     </div>
-                    <div className="mta mb10 jt">Contact:</div>
-                    <div className="" style={{ marginLeft: "30px" }}>
-                        <div className="mb10 jt">
-                            Email: <a href="mailto:omcolebourne@gmail.com">omcolebourne@gmail.com</a>
+                    <h2 className="mta mb10 jt">Contact:</h2>
+                    <div className="">
+                        <div className="fr">
+                            {/* <svg
+                                version="1.1"
+                                style={{ maxWidth: mobile() ? 20 : 32, transform: "translateY(50%)", marginRight: 10 }}
+                                id="line_2"
+                                x="0px"
+                                y="0px"
+                                width="100%"
+                                height="20"
+                                xmlSpace="preserve"
+                            >
+                                <path class="path2" fill="#1d1d1d" stroke-width="3" stroke="#1d1d1d" d="M0 0 l120 0" />
+                            </svg> */}
+                            <div className="jt">
+                                Email: <a href="mailto:omcolebourne@gmail.com">omcolebourne@gmail.com</a>
+                            </div>
                         </div>
-                        <div className="jt">Phone: +447748603168</div>
+                        <div className="fr">
+                            {/* <svg
+                                version="1.1"
+                                style={{ maxWidth: mobile() ? 20 : 32, transform: "translateY(50%)", marginRight: 10 }}
+                                id="line_2"
+                                x="0px"
+                                y="0px"
+                                width="100%"
+                                height="20"
+                                xmlSpace="preserve"
+                            >
+                                <path class="path2" fill="#1d1d1d" stroke-width="3" stroke="#1d1d1d" d="M0 0 l120 0" />
+                            </svg> */}
+                            <div className="jt">Phone: +447748603168</div>
+                        </div>
                     </div>
                 </Col>
             </Row>

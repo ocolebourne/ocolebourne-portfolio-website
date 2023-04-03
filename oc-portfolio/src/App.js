@@ -51,7 +51,7 @@ function App() {
               <Route path="/ideaslab" component={() => <IdeasLab topbar={!screenLarge} />} />
               <Route path="/artops" component={() => <Artops topbar={!screenLarge} />} />
               <Route path="/foto" component={() => <Foto topbar={!screenLarge} />} />
-              <Route path="/cv" component={() => {window.location.href = "/Oliver_Colebourne_CV.pdf"}} />
+              {/* <Route path="/cv" component={() => {window.location.href = "/Oliver_Colebourne_CV.pdf"}} /> */}
               <Route path="/" component={() => {window.location.href = "/"}} />
             </Switch>
           </Col>

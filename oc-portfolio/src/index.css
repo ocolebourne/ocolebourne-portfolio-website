@@ -6,7 +6,7 @@
     --project-grey3: #403c3a;
     --project-grey4: #736e6c;
     --project-grey5: #8c8887;
-    --project-highlight: #3995e0;
+    --project-highlight: #508dd2;
 }
 
 ::selection {
@@ -47,11 +47,11 @@ strong {
 }
 
 a:link {
-    text-decoration: none;
-    color: var(--project-highlight);
+    text-decoration: underline;
+    color: var(--project-grey3);
 }
 a:visited {
-    color: var(--project-highlight);
+    color: var(--project-grey3);
 }
 
 a:hover {
@@ -257,6 +257,7 @@ h2 {
     padding-right: 15px;
 }
 
+
 .next-project-button-cont {
     text-align: right;
     padding-left: 15px;
@@ -439,8 +440,14 @@ h2 {
     text-justify: inter-word;
 }
 
+.fr {
+    display: flex;
+    flex-direction: row;
+
+}
+
 .about-tags {
-    margin-left: 30px;
+    /* margin-left: 30px; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -474,6 +481,7 @@ h2 {
 .opaque-embed{
     
 }
+
 
 @media only screen and (max-width: 768px) {
     .bottom-spacer {
