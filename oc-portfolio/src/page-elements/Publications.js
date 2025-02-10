@@ -18,6 +18,13 @@ function Publications(props) {
 
     return (
         <div>
+            <h2>Aglide</h2>
+            <PublicationsRow
+                publisher="Sifted"
+                title="The European startups in Y Combinator’s S23 cohort"
+                url="https://sifted.eu/articles/european-startups-y-combinators-s23"
+            />
+            <div style={{ height: "24px" }}></div>
             <h2>Team Repair</h2>
             <PublicationsRow
                 publisher="BBC Radio Four"

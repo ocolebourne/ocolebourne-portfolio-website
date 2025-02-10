@@ -30,7 +30,7 @@ function HomeProject(props) {
 
     return (
         <div>
-            <Row>
+            {!props.noImages? <Row>
                 <Col xs={12} sm={6}>
                     { props.video1 ? 
                         <video className="home-video" autoPlay loop muted playsInline src={video_string1} type="video/mp4" ></video> : 
@@ -43,7 +43,7 @@ function HomeProject(props) {
                         <Image className="home-image" fluid src={image_string2} alt=" " />
                     }
                 </Col>
-            </Row>
+            </Row> : null}
             <Row className="home-project-body" style={mobile ? {paddingBottom:"30px"} : {}}>
 
                     <Col className="animated fadeIn" xs={10} sm={11}><strong className="text-inline">{props.name}</strong><p className="text-inline">{props.desc}</p></Col>

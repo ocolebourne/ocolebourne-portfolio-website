@@ -475,7 +475,7 @@ h2 {
 }
 
 .bottom-spacer {
-    height: calc(100vh - 160px - 407px);
+    height: calc(100vh - 160px - 382px);
 }
 
 .opaque-embed{
@@ -485,7 +485,7 @@ h2 {
 
 @media only screen and (max-width: 768px) {
     .bottom-spacer {
-        height: calc(100vh - 160px - 644.06px) !important;
+        height: calc(100vh - 160px - 616px) !important;
     }
 }
 

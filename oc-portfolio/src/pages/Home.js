@@ -25,29 +25,26 @@ function Home(props) {
             {props.topbar ? <div className="topbar-spacer"></div> : <div className="sidebar-spacer"></div>}
             <div className="home-header">
                 Design engineer, specialised in full-stack software engineering. Skilled at the development of technical products from
-                problem to fruition. Currently based in London acting as CTO for two ventures I co-founded out of university. This
-                portfolio's source code can be found{" "}
-                <a href="https://github.com/ocolebourne/ocolebourne-portfolio-website" target="_blank">
-                    here
-                </a>{" "}
-                - welcome!
+                problem to fruition. Currently based in London building Aglide as CTO - welcome!
             </div>
             <h1>CURRENT</h1>
-            <HomeDoubleProject
-                slug1="attic"
-                name1="Attic"
-                desc1=" is making onboarding, managing and revoking employees' SaaS apps a breeze."
-                url1="https://useattic.com"
-                external1
-                slug2="teamrepair"
-                name2="Team Repair"
-                desc2=" is teaching kids STEM while repairing real electronic gadgets, in order to Fix the Future."
-                url2="https://team.repair"
+            <HomeProject
+                noImages
+                slug="aglide"
+                name="Aglide"
+                desc=" is the next generation of identity. Our agentic technology connects any application to our customers' SSOs, without standard protocols (SAML, SCIM, etc.)."
+                url="https://aglide.com"
                 topbar={props.topbar}
-                external2
             />
 
             <h1>PAST PROJECTS</h1>
+            <HomeProject
+                slug="teamrepair"
+                name="Team Repair"
+                desc=" is teaching kids STEM while repairing real electronic gadgets, in order to Fix the Future."
+                url="https://team.repair"
+                topbar={props.topbar}
+            />
             <HomeProject
                 slug="opaque"
                 name="Opaque"
@@ -96,24 +93,14 @@ function Home(props) {
                 </Col>
                 <Col xs={12} md={7} lg={9} className="project-col">
                     <div className="mb10 jt">
-                        Hello! I'm a design engineer skilled at complete development of technical products from problem to fruition. I'm
-                        specialised in full-stack software development and have product managed multiple web and mobile projects - including
-                        building the Team Repair app for Apple, Android and Amazon Fire{" "}
-                        <a href="https://join.team.repair/download" target="_blank">
-                            app stores
-                        </a>
-                        . In 2022, I graduated from Imperial College London with a Masters degree (MEng) in Design Engineering, then
-                        co-founded two ventures which I'm working on now as CTO -{" "}
-                        <a href="https://useattic.com" target="_blank">
-                            Attic
-                        </a>{" "}
-                        and{" "}
-                        <a href="https://team.repair" target="_blank">
-                            Team Repair.
-                        </a>{" "}
+                        Hello! I'm a design engineer skilled at complete development of technical products from problem to fruition. In 2022, I graduated from Imperial College London with a Masters degree (MEng) in Design Engineering, then co-founded and led tech at <a href="https://team.repair" target="_blank">Team Repair</a>.
+                        In 2023 I took part in YC S23 and co-founded{" "}
+                        <a href="https://aglide.com" target="_blank">
+                            Aglide
+                        </a>{" "}, which I'm now scaling as CTO.
                     </div>
                     <div className="mb30 jt">
-                        As well as technology, I also enjoy <a href="https://olliecolebourne.tumblr.com">photography</a>.
+                        As well as technology, I also enjoy <a href="https://instagram.com/olliecolebourne">photography</a>.
                     </div>
                     <h2 className="mta mb10 jt">Links:</h2>
                     <div className="mb30 about-tags">
@@ -129,6 +116,7 @@ function Home(props) {
                         <button onClick={() => (window.location.href = "https://github.com/ocolebourne/")} className="about-tag">
                             Github
                         </button>
+
                     </div>
                     <h2 className="mta mb10 jt">Contact:</h2>
                     <div className="">
@@ -146,23 +134,8 @@ function Home(props) {
                                 <path class="path2" fill="#1d1d1d" stroke-width="3" stroke="#1d1d1d" d="M0 0 l120 0" />
                             </svg> */}
                             <div className="jt">
-                                Email: <a href="mailto:omcolebourne@gmail.com">omcolebourne@gmail.com</a>
+                                Email: omcolebourne at gmail dot com
                             </div>
-                        </div>
-                        <div className="fr">
-                            {/* <svg
-                                version="1.1"
-                                style={{ maxWidth: mobile() ? 20 : 32, transform: "translateY(50%)", marginRight: 10 }}
-                                id="line_2"
-                                x="0px"
-                                y="0px"
-                                width="100%"
-                                height="20"
-                                xmlSpace="preserve"
-                            >
-                                <path class="path2" fill="#1d1d1d" stroke-width="3" stroke="#1d1d1d" d="M0 0 l120 0" />
-                            </svg> */}
-                            <div className="jt">Phone: +447748603168</div>
                         </div>
                     </div>
                 </Col>

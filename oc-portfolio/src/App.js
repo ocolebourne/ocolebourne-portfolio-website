@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route
+  Routes,
+  Route,
+  Navigate
 } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -44,16 +45,15 @@ function App() {
 
           {screenLarge ? <Sidebar /> : null}
           <Col className="main-container">
-            <Switch>
-              <Route path="/" exact component={() => <Home topbar={!screenLarge} />} />
-              <Route path="/nova" component={() => <Nova topbar={!screenLarge} />} />
-              <Route path="/opaque" component={() => <Opaque topbar={!screenLarge} />} />
-              <Route path="/ideaslab" component={() => <IdeasLab topbar={!screenLarge} />} />
-              <Route path="/artops" component={() => <Artops topbar={!screenLarge} />} />
-              <Route path="/foto" component={() => <Foto topbar={!screenLarge} />} />
-              {/* <Route path="/cv" component={() => {window.location.href = "/Oliver_Colebourne_CV.pdf"}} /> */}
-              <Route path="/" component={() => {window.location.href = "/"}} />
-            </Switch>
+            <Routes>
+              <Route path="/" element={<Home topbar={!screenLarge} />} />
+              <Route path="/nova" element={<Nova topbar={!screenLarge} />} />
+              <Route path="/opaque" element={<Opaque topbar={!screenLarge} />} />
+              <Route path="/ideaslab" element={<IdeasLab topbar={!screenLarge} />} />
+              <Route path="/artops" element={<Artops topbar={!screenLarge} />} />
+              <Route path="/foto" element={<Foto topbar={!screenLarge} />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
           </Col>
         </Row>
       </Container>
